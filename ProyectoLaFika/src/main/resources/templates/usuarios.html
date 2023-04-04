@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmls:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>PAGINA DE INICIO</div>
+        <div th:if="${usuarios != null and !usuarios.empty}">
+            <table border ="2">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Contrasena</th>
+                    <th>Edad</th>
+                </tr>
+                <tr th:each="usuario : ${usuarios}">
+                    <td th:text="${usuario.nombre}">Muestra Nombre </td>
+                    <td th:text="${usuario.apellido}">Muestra Apellido </td>
+                    <td th:text="${usuario.contrasena}">Muestra Contraseña </td>
+                    <td th:text="${usuario.edad}">Muestra Edad </td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${usuarios == null or usuarios.empty}">
+            La lista no tiene infor
+        </div>
+    </body>
+</html>
