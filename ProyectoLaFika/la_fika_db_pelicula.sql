@@ -30,21 +30,11 @@ CREATE TABLE `pelicula` (
   `sipnosis` varchar(45) DEFAULT NULL,
   `minutos` int DEFAULT NULL,
   `year` int DEFAULT NULL,
-  `linktrailer` varchar(150) DEFAULT NULL,
-  `linkbanner` varchar(150) DEFAULT NULL,
+  `linktrailer` mediumtext,
+  `linkbanner` mediumtext,
   PRIMARY KEY (`idpelicula`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pelicula`
---
-
-LOCK TABLES `pelicula` WRITE;
-/*!40000 ALTER TABLE `pelicula` DISABLE KEYS */;
-INSERT INTO `pelicula` VALUES (1,'asdf','asdfas',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg?tf=1080x'),(6,'aw','asdfas',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://deadline.com/wp-content/uploads/2022/10/The-Super-Mario-Bros-Movie.jpg?w=681&h=383&crop=1'),(7,'asd','asdfas',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg?tf=1080x'),(8,'asd','asdfas',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg?tf=1080x'),(9,'asd','asdfas',234234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg?tf=1080x'),(10,'asd','asdfas',234,44,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://deadline.com/wp-content/uploads/2022/10/The-Super-Mario-Bros-Movie.jpg?w=681&h=383&crop=1'),(11,'asd','asdfasasdfas',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg?tf=1080x'),(12,'asd','asdfas',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg?tf=1080x'),(13,'asd','asdfs',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://deadline.com/wp-content/uploads/2022/10/The-Super-Mario-Bros-Movie.jpg?w=681&h=383&crop=1'),(14,'asd','asdfs',234,4,'https://www.youtube.com/watch?v=AZS_d_hS2dM','https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2021/06/avatar-2366079.jpg?tf=1080x');
-/*!40000 ALTER TABLE `pelicula` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -55,4 +45,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-04 17:15:53
+-- Dump completed on 2023-04-07  4:29:43
