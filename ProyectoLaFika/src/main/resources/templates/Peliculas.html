@@ -13,22 +13,60 @@
     <body>
         <div class="col">
             <div class="row">
-                <header class="header"> 
-                    <nav class="nav">
-                        <img src="imagenes/Logo.png" alt="" width="100"/>
-                        <a href="/" class="logo nav-link"> LaFika</a>
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">
+                            <img src="imagenes/Logo.png" alt="" width="100" class="d-inline-block align-text-top">
+                            LaFika
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="peliculas">Películas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="series">Series</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="documentales">Documentales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Lista.html">Lista</a>
+                                </li>
 
-                        <ul class="nav-menu">
-                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="/">Inicio</a></li>
-                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="peliculas">Peliculas</a></li>
-                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="series">Series</a></li>
-                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="documentales">Documentales</a></li>
-                            <li class="nav-menu-item"><a class="nav-menu-link nav-link" href="Lista.html">Lista</a></li>
-                        </ul>
-                        <label>Buscar</label><input type="search" name="search" placeholder="Buscarkjgkjg"><br><br> 
-                        <img src="imagenes/Perfil.png" alt="" width="50"/>
-                    </nav>
-                </header>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Añadir
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="nuevaSerie">Nueva Serie</a></li>
+                                        <li><a class="dropdown-item" href="nuevoDocumental">Nuevo Documental</a></li>
+                                        <li><a class="dropdown-item" href="nuevaPelicula">Nueva Película</a></li>
+                                        <li><a class="dropdown-item" href="nuevoAdministrador">Nuevo Administrador</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                            </form>
+                            <div class="dropdown">
+                                <img src="imagenes/Perfil.png" alt="" width="50" class="ms-3 dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Editar información</a></li>
+                                    <li><a class="dropdown-item" href="#">Salir</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
                 <br><br><br>
             </div>
             <br><br><br>

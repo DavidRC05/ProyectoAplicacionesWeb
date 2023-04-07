@@ -7,50 +7,11 @@ body{
     padding: 45px 20px 0;
     background-color: #2B292E;
 }
-
-.header{
-    background-color: black;
-    heigt: 12%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    max-width: 992px;
-    margin: 0 auto;
-}
-.nav-link{
-    color: white;
-    text-decoration: none;
-}
-
 .logo{
     font-size: 30px;
     font-weight: bold;
     padding: 0 40px;
     line-height: 80px;   
-}
-.nav-menu{
-    display: flex;
-    margin-right: 40px;
-    list-style: none;
-}
-.nav-menu-item{
-    font-size: 18px;
-    margin: 0 18px;
-    line-height: 80px;
-    width: max-content;
-}
-.nav-menu-link{
-    padding: 8px 12px;
-    border-radius: 10px;
-}
-.nav-menu-link:hover{
-    background-color: #173D9F;
-    transition: 0.7s;
 }
 
 .Titulo{
@@ -69,3 +30,59 @@ body{
     left: 0;
     width: 100%;
 }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  .navbar-brand img {
+    margin-right: 10px;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-item {
+    margin-right: 20px;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    border-bottom: 2px solid #28a745;
+  }
+
+  .form-control {
+    background-color: #444;
+    border: none;
+    color: white;
+    border-radius: 0;
+  }
+
+  .btn-outline-success {
+    color: #fff;
+    border-color: black;
+  }
+
+  .btn-outline-success:hover {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  .img {
+    border-radius: 50%;
+  }

@@ -14,12 +14,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div th:if="${usuarios != null and !usuarios.empty}">
             <table border ="2">
                 <tr>
+                    <th>ID</th>
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Contrasena</th>
                     <th>Edad</th>
                 </tr>
                 <tr th:each="usuario : ${usuarios}">
+                    <td th:text="${usuario.idusuario}">Muestra Nombre </td>
                     <td th:text="${usuario.nombre}">Muestra Nombre </td>
                     <td th:text="${usuario.apellido}">Muestra Apellido </td>
                     <td th:text="${usuario.contrasena}">Muestra Contraseña </td>
