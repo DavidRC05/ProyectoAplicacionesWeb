@@ -19,7 +19,10 @@ public class documentalServicioImp implements documentalServicio{
             
     @Override
     @Transactional(readOnly = true)
-    public List<documental> listaDocumentales() {
+    public List<documental> listaDocumentales(String palabra) {
+        if (palabra !=null){
+            return (List<documental>) objDao.findAll(palabra);
+        }
       return (List<documental>) objDao.findAll();
     }
     @Override
@@ -35,7 +38,7 @@ public class documentalServicioImp implements documentalServicio{
     }
 
     @Override
-    public documental localizarUsuario(documental obj) {
+    public documental localizar(documental obj) {
         return objDao.findById(obj.getIddocumental()).orElse(null);
     }
     

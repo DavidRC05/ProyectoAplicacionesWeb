@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface peliculaServicio {
     
-    public List<pelicula> listaPeliculas();
+    public List<pelicula> listaPeliculas(String palabra);
     public void guardar(pelicula obj);
     public void borrar(pelicula obj);
     public pelicula localizarUsuario(pelicula obj);

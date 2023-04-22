@@ -11,101 +11,108 @@
         <link href="css/Home.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="col">
-            <div class="row">
+        <div class="row">
+            <div class="col">
                 <div class="row">
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="/">
-                                <img src="imagenes/Logo.png" alt="" width="100" class="d-inline-block align-text-top">
-                                LaFika
-                            </a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarNav">
-                                <ul class="navbar-nav ms-auto">
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="/">Inicio</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="peliculas">Películas</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="series">Series</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="documentales">Documentales</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="Lista.html">Lista</a>
-                                    </li>
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="/">
+                                    <img src="imagenes/Logo.png" alt="" width="100" class="d-inline-block align-text-top">
+                                    LaFika
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="peliculas">Películas</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="series">Series</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="documentales">Documentales</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="Lista.html">Lista</a>
+                                        </li>
 
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Añadir
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="nuevaSerie">Nueva Serie</a></li>
-                                            <li><a class="dropdown-item" href="nuevoDocumental">Nuevo Documental</a></li>
-                                            <li><a class="dropdown-item" href="nuevaPelicula">Nueva Película</a></li>
-                                            <li><a class="dropdown-item" href="nuevoAdministrador">Nuevo Administrador</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <form class="d-flex">
-                                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                                </form>
-                                <div class="dropdown">
-                                    <img src="imagenes/Perfil.png" alt="" width="50" class="ms-3 dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" href="#">Editar información</a></li>
-                                        <li><a class="dropdown-item" href="#">Salir</a></li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Añadir
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="nuevaSerie">Nueva Serie</a></li>
+                                                <li><a class="dropdown-item" href="nuevoDocumental">Nuevo Documental</a></li>
+                                                <li><a class="dropdown-item" href="nuevaPelicula">Nueva Película</a></li>
+                                                <li><a class="dropdown-item" href="nuevoAdministrador">Nuevo Administrador</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
+                                    <form class="d-flex" th:action="@{/busqueda}" method="GET">
+                                        <input th:value="${palabra}" name="palabra" class="form-control me-2" type="text" placeholder="Buscar" aria-label="Buscar" required>
+                                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                                    </form>
+                                    <div class="dropdown">
+                                        <img src="imagenes/Perfil.png" alt="" width="50" class="ms-3 dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <li><a class="dropdown-item" href="#">Editar información</a></li>
+                                            <li><a class="dropdown-item" href="#">Salir</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </nav>
+                        </nav>
 
+                        <br><br><br>
+                    </div>
                     <br><br><br>
                 </div>
                 <br><br><br>
-            </div>
-            <br><br><br>
-            <div class="row">
-                <br><br><br>
-                <h1 style="color: white;">Lo más nuevo en Series</h1>
-                <div th:if="${series != null and !series.empty}">
+                <div class="row">
+                    <br><br><br>
+                    <h1 style="color: white;">Lo más nuevo en Series</h1>
+                    <div th:if="${series != null and !series.empty}">
 
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div th:each="serie : ${series}" class="col">
-                            <div class="card">
-                                <img th:src="${serie.linkbanner}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title" th:text="${serie.nombre}">Nombre de la serie</h5>
-                                    <p class="card-text" th:text="${serie.sipnosis}">Sinopsis de la serie</p>
-                                    <p class="card-text">
-                                        <strong>Temporadas:</strong> <span th:text="${serie.temporadas}">1</span>
-                                    </p>
-                                    <p class="card-text">
-                                        <strong>Capítulos:</strong> <span th:text="${serie.capitulos}">10</span>
-                                    </p>
-                                    <p class="card-text">
-                                        <strong>Año:</strong> <span th:text="${serie.year}">2021</span>
-                                    </p>
-                                    <a th:href="${serie.linktrailer}" class="btn btn-primary" target="_blank">Ver trailer</a>
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div th:each="serie : ${series}" class="col">
+                                <div class="card">
+                                    <img th:src="${serie.linkbanner}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title" th:text="${serie.nombre}">Nombre de la serie</h5>
+                                        <p class="card-text" th:text="${serie.sipnosis}">Sinopsis de la serie</p>
+                                        <p class="card-text">
+                                            <strong>Temporadas:</strong> <span th:text="${serie.temporadas}">1</span>
+                                        </p>
+                                        <p class="card-text">
+                                            <strong>Capítulos:</strong> <span th:text="${serie.capitulos}">10</span>
+                                        </p>
+                                        <p class="card-text">
+                                            <strong>Año:</strong> <span th:text="${serie.year}">2021</span>
+                                        </p>
+                                        <a th:href="${serie.linktrailer}" class="btn btn-primary" target="_blank">Ver trailer</a>
+                                    </div>
                                 </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
-                </div>
-                <div th:if="${series == null or series.empty}">
-                    La lista no tiene peliculas
-                </div>
+                    <div th:if="${series == null or series.empty}">
+                        La lista no tiene peliculas
+                    </div>
 
+                </div>
+            </div>
+
+
+            <div class="col-1 bg-white">
+                <h1>anuncios</h1>
             </div>
         </div>
         <footer id="piePagina">

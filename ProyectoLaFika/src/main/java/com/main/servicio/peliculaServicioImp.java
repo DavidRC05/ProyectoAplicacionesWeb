@@ -19,7 +19,10 @@ public class peliculaServicioImp implements peliculaServicio{
             
     @Override
     @Transactional(readOnly = true)
-    public List<pelicula> listaPeliculas() {
+    public List<pelicula> listaPeliculas(String palabra) {
+        if (palabra !=null){
+            return (List<pelicula>) objDao.findAll(palabra);
+        }
       return (List<pelicula>) objDao.findAll();
     }
     @Override

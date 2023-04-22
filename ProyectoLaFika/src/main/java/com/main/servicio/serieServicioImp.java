@@ -19,7 +19,10 @@ public class serieServicioImp implements serieServicio{
             
     @Override
     @Transactional(readOnly = true)
-    public List<serie> listaSerie() {
+    public List<serie> listaSerie(String palabra) {
+        if (palabra !=null){
+            return (List<serie>) seriDao.findAll(palabra);
+        }
       return (List<serie>) seriDao.findAll();
     }
 

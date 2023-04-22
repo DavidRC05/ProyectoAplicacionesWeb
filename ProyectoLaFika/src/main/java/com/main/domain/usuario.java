@@ -16,6 +16,8 @@ public class usuario implements Serializable{
     private String nombre;
     private String apellido;
     private String contrasena;
+    private String username;
+    private String rol;
     private int edad;
             
 }

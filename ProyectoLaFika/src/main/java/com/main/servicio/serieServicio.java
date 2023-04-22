@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface serieServicio {
     
-    public List<serie> listaSerie();
+    public List<serie> listaSerie(String palabra);
     public void guardar(serie seri);
     public void borrar(serie seri);
     public serie localizarSerie(serie seri);

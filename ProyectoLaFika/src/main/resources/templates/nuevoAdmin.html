@@ -53,17 +53,17 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                            <form class="d-flex" th:action="@{/busqueda}" method="GET">
+                                <input th:value="${palabra}" name="palabra" class="form-control me-2" type="text" placeholder="Buscar" aria-label="Buscar" required>
                                 <button class="btn btn-outline-success" type="submit">Buscar</button>
                             </form>
                             <div class="dropdown">
-                            <img src="imagenes/Perfil.png" alt="" width="50" class="ms-3 dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <li><a class="dropdown-item" href="#">Editar información</a></li>
-                                <li><a class="dropdown-item" href="#">Salir</a></li>
-                            </ul>
-                        </div>
+                                <img src="imagenes/Perfil.png" alt="" width="50" class="ms-3 dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Editar información</a></li>
+                                    <li><a class="dropdown-item" href="#">Salir</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -90,6 +90,10 @@
                             <div class="form-group mb-3">
                                 <label for="edad" class="form-label">Edad</label>
                                 <input type="number" class="form-control" id="edad" name="edad" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="edad" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="submit" class="btn btn-primary">Guardar</button>

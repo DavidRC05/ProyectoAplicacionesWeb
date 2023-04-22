@@ -13,8 +13,8 @@ import java.util.List;
  */
 public interface documentalServicio {
     
-    public List<documental> listaDocumentales();
+    public List<documental> listaDocumentales(String palabra);
     public void guardar(documental obj);
     public void borrar(documental obj);
-    public documental localizarUsuario(documental obj);
+    public documental localizar(documental obj);
 }

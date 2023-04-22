@@ -53,8 +53,8 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                            <form class="d-flex" th:action="@{/busqueda}" method="GET">
+                                <input th:value="${palabra}" name="palabra" class="form-control me-2" type="text" placeholder="Buscar" aria-label="Buscar" required>
                                 <button class="btn btn-outline-success" type="submit">Buscar</button>
                             </form>
                             <div class="dropdown">
