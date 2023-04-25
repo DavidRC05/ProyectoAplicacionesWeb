@@ -41,18 +41,6 @@ public class controlador {
     public String comienzo(Model model){
         return "index";
     }
-    @GetMapping("/menu")
-    public String menu(Model model){
-        return "menu";
-    }
-    @GetMapping("/admin")
-    public String admin(Model model){
-        return "admin";
-    }
-    @GetMapping("/user")
-    public String user(Model model){
-        return "user";
-    }
     
     @GetMapping("/usuarios")
     public String getUsuarios(Model model){
