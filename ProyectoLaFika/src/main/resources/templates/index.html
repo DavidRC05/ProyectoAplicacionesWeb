@@ -1,50 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Mi primer Login</title>
+<html lang="es">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
+          crossorigin="anonymous">
+    <head>
+        <title>LaFika</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Página de la leccion 2"/>
+        <meta name="Keywords" content="htmls, css, web, fidelitas"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/Home.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">
+                        <img src="imagenes/Logo.png" alt="" width="100" class="d-inline-block align-text-top">
+                        LaFika
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="peliculas">Películas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="series">Series</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="documentales">Documentales</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Lista.html">Lista</a>
+                            </li>
 
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
-    <!-- Los iconos tipo Solid de Fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
-    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-
-    <!-- Nuestro css-->
-    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
-
-</head>
-<body>
-    <div class="modal-dialog text-center">
-        <div class="col-sm-8 main-section">
-            <div class="modal-content">
-                <div class="col-12 user-img">
-                    <img src="static/img/user.png" th:src="@{/img/user.png}"/>
-                </div>
-                <form class="col-12" th:action="@{/menu}" method="get">
-                    <div class="form-group" id="user-group">
-                        <input type="text" class="form-control" placeholder="Nombre de usuario" name="username"/>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Añadir
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="nuevaSerie">Nueva Serie</a></li>
+                                    <li><a class="dropdown-item" href="nuevoDocumental">Nuevo Documental</a></li>
+                                    <li><a class="dropdown-item" href="nuevaPelicula">Nueva Película</a></li>
+                                    <li><a class="dropdown-item" href="nuevoAdministrador">Nuevo Administrador</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" th:action="@{/busqueda}" method="GET">
+                            <input th:value="${palabra}" name="palabra" class="form-control me-2" type="text" placeholder="Buscar" aria-label="Buscar" required>
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                        <div class="dropdown">
+                            <img src="imagenes/Perfil.png" alt="" width="50" class="ms-3 dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Editar información</a></li>
+                                <li><a class="dropdown-item" href="#">Salir</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="form-group" id="contrasena-group">
-                        <input type="password" class="form-control" placeholder="Contrasena" name="password"/>
-                    </div>
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
-                </form>
-                <div class="col-12 forgot">
-                    <a href="#">Recordar contrasena?</a>
                 </div>
-                <div th:if="${param.error}" class="alert alert-danger" role="alert">
-		            Invalid username and password.
-		        </div>
-		        <div th:if="${param.logout}" class="alert alert-success" role="alert">
-		            You have been logged out.
-		        </div>
-            </div>
+            </nav>
+
+            <br><br><br>
         </div>
-    </div>
-</body>
+        <section id="contenido">
+            <article>
+                <br/>
+                <figure class="Inicio">
+                    <img src="imagenes/16591757825079.jpg" alt="Uncharted" width="1000"/>
+                </figure>
+                <h2 class="Titulo">Uncharted</h2>
+                <label></label><input type="button" value="Ver ahora" id="button" />
+                <label></label><input type="button" value="Añadir a lista" id="button" />  
+                <label></label><input type="button" value="Mas detalles" id="button" />
+            </article>
+            <br/>
+            <h2>Continuar Viendo</h2>
+            <article>
+                <article>
+                    <figure>
+                        <img src="imagenes/1-peliculas-de-accion-plane.jpg" alt="" width="400"/>
+                        <img src="imagenes/mejores-peliculas-2022 (1).jpg" alt="" width="350"/>
+                        <img src="imagenes/x.jpg" width="300"/>         
+                    </figure>
+                </article>
+            </article>
+            <h2>Popular</h2>
+            <article>
+                <article>
+                    <figure>
+                        <img src="imagenes/1.jpeg" width="230"/>
+                        <img src="imagenes/Troll-ver-la-nueva-pelicula-de-monstruos-gigantes-en-Netflix-3.jpg" alt="" width="400"/>
+                        <img src="imagenes/sonrie-acostadooooooooo-1.png" alt="" width="400"/>
+                        <img src="imagenes/maxresdefault.jpg" alt="" width="400"/>
+                    </figure>
+                </article>
+            </article>
+
+
+            <h2>Originales de LaFika</h2>
+            <article>
+                <article>
+                    <figure>
+                        <img src="imagenes/12.jpg" alt="" width="150"/>
+                        <img src="imagenes/assassins-creed-movie2-1-e1482855910825_1.jpg" alt="" width="400"/>
+                        <img src="imagenes/El-Conjuro-3.png" alt="" width="400"/>
+                        <img src="imagenes/hombre.jpg" alt="" width="500"/>
+                    </figure>
+                </article>
+            </article>
+            <h2>Para usted</h2>
+            <article>
+                <article>
+                    <figure>
+                        <img src="imagenes/sha.jpeg" alt="" width="400"/>
+                        <img src="imagenes/tr.jpg" alt="" width="150"/>
+                        <img src="imagenes/venum.jpg" alt="" width="400"/>
+                        <img src="imagenes/dragon.jpg" alt="" width="400"/>
+                    </figure>
+                </article>
+            </article>
+            <h2>Proximamente</h2>
+            <article>
+                <article>
+                    <figure>
+                        <img src="imagenes/araña.jpg" alt="" width="150"/>
+                        <img src="imagenes/kimet.jpg" alt="" width="150"/>
+                        <img src="imagenes/mario.jpg" alt="" width="150"/>
+                        <img src="imagenes/volumne3.jpeg" alt="" width="400"/>
+                    </figure>
+                </article>
+            </article>
+
+        </section>
+        <br/><br/>
+        <footer id="piePagina">
+            Derechos reservados &COPY; 2023 <address class="lineaDireccion">ProyectoLaFika</address> <address class="lineaDireccion">Correo: lcalvo80905@ufide.ac.cr</address>
+        </footer> 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
+        crossorigin="anonymous"></script>
+    </body>
 </html>
